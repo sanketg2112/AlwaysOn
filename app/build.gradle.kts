@@ -19,6 +19,9 @@ android {
         targetSdk = 34
         versionCode = 391
         versionName = "3.9.1"
+        
+        // Disable all translations
+        resourceConfigurations += listOf("en")
     }
 
     buildTypes {
@@ -59,6 +62,7 @@ android {
     lint {
         disable += "MissingTranslation"
     }
+    
     project.tasks.preBuild.dependsOn("license")
 }
 
