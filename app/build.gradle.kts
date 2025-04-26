@@ -1,6 +1,6 @@
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 
-private val readAndUnderstoodLicense = false
+private val readAndUnderstoodLicense = true
 
 plugins {
     id("com.android.application")
