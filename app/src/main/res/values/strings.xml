@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="device_admin_description">Allow AlwaysOn to turn off your screen</string>
     <string name="notification_listener_description">Show notifications on the always on display</string>
@@ -20,7 +21,7 @@
     <string name="setup_continue">Continue</string>
     <string name="setup_error">Something went wrong! Please try again!</string>
 
-    <string name="dialog_device_admin_text">Please note that you have to deactivate the app\’s device admin privileges before uninstalling it! To make sure you understood this please perform the following operation:\n7 + 12</string>
+    <string name="dialog_device_admin_text">Please note that you have to deactivate the app\'s device admin privileges before uninstalling it! To make sure you understood this please perform the following operation:\n7 + 12</string>
     <string name="dialog_device_admin_result">Result</string>
     <string name="dialog_device_admin_error">Wrong result. Try again.</string>
 
@@ -64,6 +65,7 @@
     <string name="pref_look_and_feel_ao">Always on look</string>
     <string name="pref_look_and_feel_ao_summary">Changes the look of the always on display</string>
     <string-array name="pref_look_and_feel_ao_array_display">
+        <item>Circular</item>
         <item>G-Style</item>
         <item>O-Style</item>
         <item>S-Vertical</item>
@@ -78,6 +80,7 @@
         <item>Western</item>
         <item>Analog</item>
     </string-array>
+
     <string name="pref_look_and_feel_colors">Colors</string>
     <string name="pref_look_and_feel_colors_summary">Select colors for certain elements</string>
     <string name="pref_look_and_feel_colors_clock">Clock color</string>
@@ -89,6 +92,7 @@
     <string name="pref_look_and_feel_colors_weather">Weather color</string>
     <string name="pref_look_and_feel_colors_notification">Notification color</string>
     <string name="pref_look_and_feel_colors_fingerprint">Fingerprint icon color</string>
+    
     <string name="pref_ao_showClock">Display the time</string>
     <string name="pref_ao_showDate">Display the date</string>
     <string name="pref_ao_showBatteryIcn">Display a battery icon</string>
@@ -126,7 +130,7 @@
     <string name="pref_ao_disable_on_dnd">Disable in Do Not Disturb mode</string>
     <string name="pref_ao_disable_on_dnd_summary">Only show when Do Not Disturb mode is inactive</string>
     <string name="pref_ao_power_saving">Power saving mode (root)</string>
-    <string name="pref_ao_power_saving_summary">Turns on the system\’s power saver mode when the always on display is enabled</string>
+    <string name="pref_ao_power_saving_summary">Turns on the system\'s power saver mode when the always on display is enabled</string>
     <string name="pref_ao_double_tap_speed">Double-tap speed</string>
     <string name="pref_ao_double_tap_speed_summary">The time two taps can be apart (in milliseconds)</string>
     <string name="pref_ao_double_tap_disabled">Disable double-tap</string>
@@ -159,18 +163,15 @@
         <item>Daniel Olah</item>
         <item>Daniel Olah</item>
         <item>Daniel Olah</item>
-        <item>Daniel Olah</item>
-        <item>Daniel Olah</item>
         <item>Filip Baotic</item>
-        <item>Tyler Lastovich</item>
-        <item>Tyler Lastovich</item>
         <item>Tyler Lastovich</item>
         <item>Custom</item>
     </string-array>
+    
     <string name="pref_look_and_feel_hide_display_cutouts">Hide display cutouts</string>
     <string name="pref_look_and_feel_hide_display_cutouts_summary">Hide display cutouts on fullscreen content</string>
     <string name="pref_look_and_feel_orientation">Orientation</string>
-    <string name="pref_look_and_feel_orientation_summary">Changes the display\’s orientation</string>
+    <string name="pref_look_and_feel_orientation_summary">Changes the display\'s orientation</string>
     <string name="pref_look_and_feel_heads_up">Hide heads up notifications (root)</string>
     <string name="pref_look_and_feel_heads_up_summary">Prevents the heads up notifications from showing (experimental)</string>
 
@@ -223,13 +224,13 @@
     <string name="pref_draw_over_other_apps">Display over other apps</string>
     <string name="pref_draw_over_other_apps_summary">Enable or disable this permission</string>
     <string name="pref_admin">Device admin</string>
-    <string name="pref_admin_summary">Activate this device admin for normal mode\nPlease note that you have to deactivate the app\’s device admin privileges before uninstalling it!</string>
+    <string name="pref_admin_summary">Activate this device admin for normal mode\nPlease note that you have to deactivate the app\'s device admin privileges before uninstalling it!</string>
     <string name="pref_root_mode">Root mode</string>
     <string name="pref_root_mode_summary">Enables root functionality</string>
 
     <string name="help_center">Help center</string>
     <string name="help_center_summary">Uninstalling, unresponsiveness, battery drain</string>
-    <string name="help_center_missing_permissions_text">When a setting is grayed out and tells you to enable something first, you have not enabled the needed permissions yet. To grant missing permissions open the “Permissions” page on the main page and consent to using the required permissions. You can now enable the settings that need those permissions.</string>
+    <string name="help_center_missing_permissions_text">When a setting is grayed out and tells you to enable something first, you have not enabled the needed permissions yet. To grant missing permissions open the "Permissions" page on the main page and consent to using the required permissions. You can now enable the settings that need those permissions.</string>
     <string name="help_center_uninstall">How to uninstall</string>
     <string name="help_center_uninstall_text">The uninstall process can fail due to a design flaw in the Android operating system. If the device admin permission was not disabled before uninstalling the process will fail. You have to disable the device admin permission before uninstalling.</string>
     <string name="help_center_uninstall_button">Uninstall now</string>
@@ -238,7 +239,7 @@
     <string name="help_center_delays_button_one">Battery Settings</string>
     <string name="help_center_delays_button_two">Manufacturer-specific</string>
     <string name="help_center_battery_drain">Figuring out the source of battery drain</string>
-    <string name="help_center_battery_drain_text">One reason for battery drain could be that you are using a phone with an LCD display. This app is designed for phones with an OLED display that can turn off black pixels to save energy. LCD displays cannot turn off black pixels which will result in the display using a lot more energy when the always on display is enabled.Another reason could be that other apps are running in the background while the always on display is running. Android will display their battery consumption as part of AlwaysOn’s battery consumption.</string>
+    <string name="help_center_battery_drain_text">One reason for battery drain could be that you are using a phone with an LCD display. This app is designed for phones with an OLED display that can turn off black pixels to save energy. LCD displays cannot turn off black pixels which will result in the display using a lot more energy when the always on display is enabled. Another reason could be that other apps are running in the background while the always on display is running. Android will display their battery consumption as part of AlwaysOn\'s battery consumption.</string>
 
     <string name="loading">Loading</string>
     <string name="missing_permissions">Missing Permissions</string>

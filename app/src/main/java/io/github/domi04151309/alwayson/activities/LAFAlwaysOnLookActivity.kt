@@ -16,6 +16,7 @@ class LAFAlwaysOnLookActivity : BaseActivity(), LayoutListAdapter.OnItemClickLis
 
     private val drawables =
         arrayOf(
+            R.drawable.always_on_circular, // Add our new circular clock style as first option
             R.drawable.always_on_google,
             R.drawable.always_on_oneplus,
             R.drawable.always_on_samsung,
@@ -34,6 +35,7 @@ class LAFAlwaysOnLookActivity : BaseActivity(), LayoutListAdapter.OnItemClickLis
     @Suppress("CyclomaticComplexMethod")
     private fun positionToString(position: Int): String =
         when (position) {
+            ITEM_CIRCULAR -> P.USER_THEME_CIRCULAR
             ITEM_GOOGLE -> P.USER_THEME_GOOGLE
             ITEM_ONEPLUS -> P.USER_THEME_ONEPLUS
             ITEM_SAMSUNG -> P.USER_THEME_SAMSUNG
@@ -53,6 +55,7 @@ class LAFAlwaysOnLookActivity : BaseActivity(), LayoutListAdapter.OnItemClickLis
     @Suppress("CyclomaticComplexMethod")
     private fun stringToPosition(string: String): Int =
         when (string) {
+            P.USER_THEME_CIRCULAR -> ITEM_CIRCULAR
             P.USER_THEME_GOOGLE -> ITEM_GOOGLE
             P.USER_THEME_ONEPLUS -> ITEM_ONEPLUS
             P.USER_THEME_SAMSUNG -> ITEM_SAMSUNG
@@ -114,18 +117,19 @@ class LAFAlwaysOnLookActivity : BaseActivity(), LayoutListAdapter.OnItemClickLis
     }
 
     companion object {
-        private const val ITEM_GOOGLE = 0
-        private const val ITEM_ONEPLUS = 1
-        private const val ITEM_SAMSUNG = 2
-        private const val ITEM_SAMSUNG2 = 3
-        private const val ITEM_SAMSUNG3 = 4
-        private const val ITEM_80S = 5
-        private const val ITEM_FAST = 6
-        private const val ITEM_FLOWER = 7
-        private const val ITEM_GAME = 8
-        private const val ITEM_HANDWRITTEN = 9
-        private const val ITEM_JUNGLE = 10
-        private const val ITEM_WESTERN = 11
-        private const val ITEM_ANALOG = 12
+        private const val ITEM_CIRCULAR = 0
+        private const val ITEM_GOOGLE = 1
+        private const val ITEM_ONEPLUS = 2
+        private const val ITEM_SAMSUNG = 3
+        private const val ITEM_SAMSUNG2 = 4
+        private const val ITEM_SAMSUNG3 = 5
+        private const val ITEM_80S = 6
+        private const val ITEM_FAST = 7
+        private const val ITEM_FLOWER = 8
+        private const val ITEM_GAME = 9
+        private const val ITEM_HANDWRITTEN = 10
+        private const val ITEM_JUNGLE = 11
+        private const val ITEM_WESTERN = 12
+        private const val ITEM_ANALOG = 13
     }
 }

@@ -69,7 +69,8 @@ class AlwaysOnCustomView : View {
 
     private var skipPositions = intArrayOf(0, 0, 0)
 
-    private val flags = booleanArrayOf(false, false, false, false, false)
+    // Increase the size of the flags array to accommodate all defined flag constants (0-5)
+    private val flags = booleanArrayOf(false, false, false, false, false, false)
 
     @JvmField
     internal val updateHandler = Handler(Looper.getMainLooper())
@@ -96,6 +97,14 @@ class AlwaysOnCustomView : View {
     @Suppress("MagicNumber", "CyclomaticComplexMethod", "LongMethod")
     private fun prepareTheme() {
         when (utils.prefs.get(P.USER_THEME, P.USER_THEME_DEFAULT)) {
+            P.USER_THEME_CIRCULAR -> {
+                utils.bigTextSize = utils.spToPx(100f)
+                utils.mediumTextSize = utils.spToPx(24f)
+                utils.smallTextSize = utils.spToPx(16f)
+                utils.setFont(R.font.roboto_regular)
+                flags[FLAG_CIRCULAR_CLOCK] = true
+            }
+            
             P.USER_THEME_ONEPLUS -> {
                 utils.bigTextSize = utils.spToPx(75f)
                 utils.mediumTextSize = utils.spToPx(20f)
@@ -380,11 +389,12 @@ class AlwaysOnCustomView : View {
                 batteryIcon,
                 batteryLevel,
                 batteryIsCharging,
+                flags
             )
         } else if (utils.prefs.get(P.SHOW_BATTERY_ICON, P.SHOW_BATTERY_ICON_DEFAULT)) {
-            Battery.drawIcon(canvas, utils, batteryIcon, batteryIsCharging)
+            Battery.drawIcon(canvas, utils, batteryIcon, batteryIsCharging, flags)
         } else if (utils.prefs.get(P.SHOW_BATTERY_PERCENTAGE, P.SHOW_BATTERY_PERCENTAGE_DEFAULT)) {
-            Battery.drawPercentage(canvas, utils, batteryLevel)
+            Battery.drawPercentage(canvas, utils, batteryLevel, flags)
         }
 
         // Music Controls
@@ -499,5 +509,6 @@ class AlwaysOnCustomView : View {
         const val FLAG_SAMSUNG_3: Int = 2
         private const val FLAG_MULTILINE_CLOCK: Int = 3
         const val FLAG_ANALOG_CLOCK: Int = 4
+        const val FLAG_CIRCULAR_CLOCK: Int = 5
     }
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="2340dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="2340">
+    <path
+        android:pathData="M0 0h1080v2340H0z"
+        android:fillColor="#FF000000"/>
+    <!-- Large Hour Text -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M400,800 L480,800 L480,1000 L400,1000 z" />
+    <!-- Circular Minute Indicator -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="10"
+        android:pathData="M540,900 A150,150 0 1,1 540,899.9" />
+    <!-- Minute Hand -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M540,900 L600,790" />
+    <!-- Date -->
+    <path
+        android:fillColor="#AAAAAA"
+        android:pathData="M540,1150 L670,1150 L670,1170 L540,1170 z" />
+    <!-- Battery Indicator -->
+    <path
+        android:fillColor="#AAAAAA"
+        android:pathData="M500,1250 L580,1250 L580,1270 L500,1270 z" />
+</vector>
